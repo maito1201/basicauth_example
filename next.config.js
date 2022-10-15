@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-const urlPrefix = process.env.URL_PREFIX ? '/' + process.env.URL_PREFIX : '/'
-
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: urlPrefix,
+  assetPrefix: '/basicauth_example/',
   basePath: process.env.GITHUB_ACTIONS && '/basicauth_example',
   trailingSlash: true,
   exportPathMap: async function() {
